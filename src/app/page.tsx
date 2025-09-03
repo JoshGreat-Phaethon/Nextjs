@@ -1,101 +1,96 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <section className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-gradient-to-br from-[#0a0a0a] via-[#0f0028] to-[#1a0033] text-white">
+      {/* Foto Hina di Background */}
+      <motion.div
+        className="absolute inset-0 z-0 flex justify-center items-center opacity-10"
+        animate={{ y: [0, 20, 0], rotate: [0, 2, -2, 0] }}
+        transition={{ duration: 6, repeat: Infinity }}
+      >
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/images/hina.jpeg"
+          alt="Sorasaki Hina"
+          width={700}
+          height={700}
+          className="rounded-full blur-md"
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">Sayyid suki</li>
-        </ol>
+      </motion.div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+      {/* Efek Partikel Bokeh */}
+      <div className="absolute inset-0 overflow-hidden z-0">
+        {Array.from({ length: 25 }).map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute bg-pink-500 rounded-full opacity-40 blur-xl"
+            style={{
+              width: Math.random() * 40 + 10,
+              height: Math.random() * 40 + 10,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, 20, 0],
+              opacity: [0.3, 0.7, 0.3],
+            }}
+            transition={{
+              duration: Math.random() * 5 + 5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Konten Utama */}
+      <div className="relative z-10 text-center px-6 max-w-3xl">
+        <motion.h1
+          className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-400 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(255,0,255,0.6)]"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Halo, Saya Gabriel 👋
+        </motion.h1>
+
+        <motion.p
+          className="mt-6 text-lg md:text-xl text-gray-300 leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+        >
+          Seorang siswa kelas 11 SMK Negeri 8 Malang dengan passion di bidang
+          pengembangan web. Fokus mempelajari{" "}
+          <span className="text-blue-400 font-semibold">
+            Frontend Development
+          </span>{" "}
+          dan teknologi modern.
+        </motion.p>
+
+        {/* Tombol Aksi */}
+        <motion.div
+          className="mt-8 flex justify-center gap-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
+        >
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/projects"
+            className="px-6 py-3 rounded-lg bg-pink-600 hover:bg-pink-700 transition-all shadow-[0_0_15px_#ff1aff] hover:shadow-[0_0_25px_#ff33ff] font-semibold"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            Lihat Proyek
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/contact"
+            className="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition-all shadow-[0_0_15px_#3b82f6] hover:shadow-[0_0_25px_#60a5fa] font-semibold"
           >
-            Read our docs
+            Hubungi Saya
           </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </motion.div>
+      </div>
+    </section>
   );
 }
