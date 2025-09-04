@@ -12,7 +12,7 @@ export default function HomePage() {
         transition={{ duration: 6, repeat: Infinity }}
       >
         <Image
-          src="/images/hina.jpeg"
+          src="/hina.jpeg"
           alt="Sorasaki Hina"
           width={700}
           height={700}
