@@ -88,6 +88,12 @@ export default function HomePage() {
             className="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition-all shadow-[0_0_15px_#3b82f6] hover:shadow-[0_0_25px_#60a5fa] font-semibold"
           >
             Hubungi Saya
+            <a
+              href="/SecretPanel"
+              className="px-6 py-3 rounded-lg bg-pink-400 hover:bg-pink-800 transition-all shadow-[0_0_15px_#ff1aff] hover:shadow-[0_0_25px_#ff33ff] font-semibold ml-4"
+            >
+              MYkisah
+            </a>
           </a>
         </motion.div>
       </div>
