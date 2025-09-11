@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { desc } from "framer-motion/client";
 import { useEffect, useState } from "react";
 
 export default function ProjectsPage() {
@@ -30,6 +31,10 @@ export default function ProjectsPage() {
     {
       title: "Ecoenzym Battery",
       desc: "Proyek inovasi membuat baterai berbahan ecoenzym.",
+    },
+    {
+      title: "Visual Novel ALice dan Aku",
+      desc: "Sebuah game visual novel interaktif yang mengisahkan petualangan Alice dan Aku.",
     },
   ];
 

@@ -11,7 +11,6 @@ export default function SkillsPage() {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 bg-gradient-to-br from-[#0a0a0a] via-[#0f0028] to-[#1a0033] overflow-hidden">
-      {/* Efek Partikel Bokeh */}
       <div className="absolute inset-0 z-0">
         {Array.from({ length: 25 }).map((_, i) => (
           <motion.div
