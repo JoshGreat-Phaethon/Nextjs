@@ -64,9 +64,7 @@ export default function HomePage() {
         >
           Seorang siswa kelas 11 SMK Negeri 8 Malang dengan passion di bidang
           pengembangan Game. Fokus mempelajari{" "}
-          <span className="text-blue-400 font-semibold">
-            Ren'py Engine dan Python
-          </span>{" "}
+          <span className="text-blue-400 font-semibold">Ren'py dan Python</span>{" "}
           serta Teknologi Lainnya
         </motion.p>
 
