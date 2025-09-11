@@ -33,7 +33,7 @@ export default function ProjectsPage() {
       desc: "Proyek inovasi membuat baterai berbahan ecoenzym.",
     },
     {
-      title: "Visual Novel ALice dan Aku",
+      title: "Visual Novel Alice dan Aku",
       desc: "Sebuah game visual novel interaktif yang mengisahkan petualangan Alice dan Aku.",
     },
   ];
