@@ -63,11 +63,11 @@ export default function HomePage() {
           transition={{ duration: 1, delay: 0.4 }}
         >
           Seorang siswa kelas 11 SMK Negeri 8 Malang dengan passion di bidang
-          pengembangan web. Fokus mempelajari{" "}
+          pengembangan Game. Fokus mempelajari{" "}
           <span className="text-blue-400 font-semibold">
-            Frontend Development
+            Ren'py Engine dan Python
           </span>{" "}
-          dan teknologi modern.
+          serta Teknologi Lainnya
         </motion.p>
 
         {/* Tombol Aksi */}

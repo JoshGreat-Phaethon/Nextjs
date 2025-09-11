@@ -12,14 +12,13 @@ export default function AboutPage() {
         <div className="absolute bottom-10 right-10 w-72 h-72 bg-blue-600 rounded-full blur-[150px] opacity-30"></div>
       </div>
 
-      {/* Kontainer Utama */}
       <div className="relative z-10 w-full max-w-5xl bg-[#0e0e2e]/80 rounded-2xl shadow-xl border border-pink-600/30 p-8 md:p-10 backdrop-blur-lg">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-          {/* Foto Profil */}
+          \
           <div className="flex flex-col items-center">
             <div className="relative">
               <Image
-                src="/gabriel.jpg" // Ganti dengan foto kamu
+                src="/gabriel.jpg"
                 alt="Gabriel"
                 width={200}
                 height={200}
@@ -28,9 +27,8 @@ export default function AboutPage() {
               <div className="absolute inset-0 rounded-full border-4 border-pink-400 animate-ping opacity-30"></div>
             </div>
             <h2 className="text-2xl font-bold mt-4 text-white">Gabriel</h2>
-            <p className="text-pink-400 text-sm">Frontend Developer</p>
+            <p className="text-pink-400 text-sm">Indie Gamedev</p>
           </div>
-
           {/* Deskripsi */}
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-4xl font-bold text-pink-400 mb-3">
@@ -39,7 +37,7 @@ export default function AboutPage() {
             <p className="text-gray-300 mb-6 leading-relaxed">
               Saya adalah siswa kelas 11{" "}
               <span className="text-pink-400">SMK Negeri 8 Malang</span> yang
-              memiliki passion dalam pengembangan web dan teknologi modern.
+              memiliki passion dalam pengembangan game dan teknologi modern.
             </p>
 
             {/* Visi & Misi */}
@@ -59,8 +57,7 @@ export default function AboutPage() {
                   🚀 Tujuan
                 </h3>
                 <p className="text-gray-300 ml-6">
-                  Menjadi{" "}
-                  <span className="text-blue-400">Frontend Developer</span>{" "}
+                  Menjadi <span className="text-blue-400">Indie Gamedev</span>{" "}
                   profesional dan membuat proyek open-source yang bermanfaat.
                 </p>
               </div>

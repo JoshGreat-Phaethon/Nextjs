@@ -38,10 +38,10 @@ export default function SkillsPage() {
       {/* Konten Utama */}
       <div className="relative z-10 w-full max-w-4xl">
         <h1 className="text-center text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-pink-500 via-purple-400 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(255,0,255,0.7)]">
-          Keahlian Frontend
+          Keahlian Saya
         </h1>
         <p className="text-center text-gray-300 mt-3 mb-10 text-lg">
-          Teknologi yang saya kuasai dalam pengembangan web
+          Teknologi yang saya Bisa
         </p>
 
         {/* Kartu Skill */}
