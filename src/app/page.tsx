@@ -37,7 +37,7 @@ export default function HomePage() {
               opacity: [0.3, 0.7, 0.3],
             }}
             transition={{
-              duration: Math.random() * 5 + 5,
+              duration: Math.random() * 6 + 6,
               repeat: Infinity,
               ease: "easeInOut",
             }}
